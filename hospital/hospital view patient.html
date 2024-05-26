@@ -1,0 +1,37 @@
+{% extends "hospital/index.html" %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="/hospital_view_patient_post#tab">
+  <table class="pull-left">
+      <tr>
+          <td><input type="search" name="textfield" class="form-control"/></td>
+          <td><input type="submit" value="SEARCH" class="btn btn-success"/></td>
+      </tr>
+  </table>
+ <br>
+ <br>
+  <table class="table table-bordered">
+    <tr>
+      <th>#</th>
+      <th colspan="2">Patient</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Place</th>
+      <th></th>
+    </tr>
+        {% for i in data %}
+    <tr>
+      <td width="50px">{{ loop.index }}&nbsp;</td>
+      <td>{{ i['patient_name'] }}&nbsp;</td>
+      <td width="90px"><img src="{{ i['photo'] }}" width="90px" height="90px"/></td>
+      <td>&nbsp;{{ i['age'] }}</td>
+      <td>&nbsp;{{ i['email'] }}</td>
+      <td>{{ i['phone_no'] }}&nbsp;</td>
+      <td>{{ i['place'] }}&nbsp;</td>
+
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

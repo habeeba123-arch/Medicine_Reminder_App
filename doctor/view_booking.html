@@ -1,0 +1,36 @@
+{% extends "doctor/index.html" %}
+{% block body %}
+<form action="" method="get"></form><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form name="form1" method="post" action="">
+  <table class="table table-bordered">
+    <tr>
+      <th>Sno</th>
+      <th>Name</th>
+      <th>Place</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Date</th>
+
+
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i['caretaker_name'] }} </td>
+      <td>&nbsp;{{ i['place'] }} </td>
+      <td>&nbsp;{{ i['phone_no'] }} </td>
+      <td>&nbsp;{{ i['email'] }} </td>
+      <td>&nbsp;{{ i['date'] }}</td>
+
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "doctor/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/edit_schedule_management_post#tab">
+<table>
+  <table class="table table-bordered">
+  <tr>
+    <td width="180px">Date</td><input type="hidden" value="{{ data['schedule_id'] }}" name="id">
+    <td>
+      <input type="date" name="textfield" required class="form-control" id="textfield" value="{{ data['date'] }}" /></td>
+  </tr>
+  <tr>
+    <td>From Time</td>
+    <td>
+      <input type="time" class="form-control" name="textfield2" required id="textfield2" value="{{ data['time_from'] }}" /></td>
+  </tr>
+  <tr>
+    <td>To Time</td>
+    <td>
+      <input type="time"  class="form-control"  name="textfield3" required id="textfield3" value="{{ data['time_to'] }}" /></td>
+  </tr>
+  <tr>
+    <td>&nbsp</td>
+    <td><input type="submit" name="button" class="btn btn-success" id="button" value="Save" /></td>
+  </tr>
+</table>
+</form>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "hospital/index.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" enctype="multipart/form-data" action="/edit_doctor_post">
+<table>
+  <table class="table table-bordered">
+    <tr>
+      <td width="180px">Name</td>
+      <td>
+      <input type="text" name="textfield" class="form-control" required id="textfield" value="{{ data['doc_name'] }}"/></td>
+    </tr>
+    <tr>
+      <td>Photo</td>
+      <td>
+      <input type="file" name="file" class="form-control" id="textfield2" value="{{ data['photo'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>
+      <input type="text" name="textfield3" class="form-control" readonly id="textfield3" value="{{ data['email'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>
+      <input type="text" name="textfield4" class="form-control" required id="textfield4" value="{{ data['phno'] }}" /></td>
+    </tr>
+
+    <tr>
+      <td>Gender</td>
+      <td>
+<input type="radio" name="radio" id="radio" value="Male" {% if data['gender']=='Male' %}checked{% endif %} />
+male
+
+          <input type="radio" name="radio" id="radio2" value="Female"{% if data['gender']=='Female'%}checked{% endif %} />
+          <label for="radio2"></label>
+        female
+
+          <input type="radio" name="radio" id="radio3" value="Others" {% if data['gender']== 'Others'%}checked{% endif %}/>
+          <label for="radio3"></label>
+        others</td>
+    </tr>
+    <tr>
+      <td>Department</td>
+      <td>
+      <input type="text" name="textfield6" class="form-control" required id="textfield6" value="{{ data['department'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td>
+      <input type="text" name="textfield7" class="form-control" required id="textfield7" value="{{ data['place'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Pin</td>
+      <td>
+      <input type="text" name="textfield8" class="form-control" required id="textfield8" value="{{ data['pin'] }}" /></td>
+    </tr>
+    <tr>
+      <td>DOB</td>
+      <td>
+      <input type="text" name="textfield9" class="form-control" required id="textfield9" value="{{ data['DOB'] }}" /></td>
+    </tr>
+       <tr>
+      <td>Qualification</td>
+      <td>
+      <input type="text" name="textfield11" class="form-control" required id="textfield9" VALUE="{{ data['qualification'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Experience</td>
+      <td>
+      <input type="text" name="textfield10" class="form-control" required id="textfield10" value="{{ data['experience'] }}" /></td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+      <input type="submit" name="button" id="button" class="btn btn-success" value="Submit" /></td>
+    </tr>
+  </table>
+
+</table>
+</form>
+{% endblock %}

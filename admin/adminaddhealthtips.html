@@ -1,0 +1,23 @@
+{% extends "admin/adminindex.html" %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="/addhealthtippost">
+  <table class="table table-bordered">
+
+       <tr>
+      <td>Title</td>
+      <td>
+      <input type="text" name="title" class="form-control" required id="textarea"></input></td>
+    </tr>
+    <tr>
+      <td>Details</td>
+      <td>
+      <textarea name="details" class="form-control" required id="textarea" cols="45" rows="5"></textarea></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="Send" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

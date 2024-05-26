@@ -1,0 +1,60 @@
+{% extends "doctor/index.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/view_doctor_profile">
+  <img src="{{ data['photo'] }}" style="height: 200px;width: 200px;">
+  <table class="table table-bordered">
+    <tr>
+      <td width="150px">Name</td>
+      <td>&nbsp;{{data['doc_name']}}</td>
+    </tr>
+    <tr>
+      <td>Department</td>
+      <td>{{ data['department'] }}</td>
+    </tr>
+    <tr>
+      <td>Dob</td>
+      <td>{{ data['DOB'] }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>{{ data['gender'] }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td>{{ data['place'] }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Pin</td>
+      <td>&nbsp;{{ data['pin'] }}</td>
+    </tr>
+    <tr>
+      <td>Experience</td>
+      <td>{{ data['experience'] }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Qualification</td>
+      <td>{{ data['qualification'] }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>&nbsp;{{ data['email'] }}</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>&nbsp;{{ data['phno'] }}</td>
+    </tr>
+    <tr>
+{#      <td>&nbsp;</td>#}
+{#      <td><a href="/edit_profile">Edit</a></td>#}
+    </tr>
+  </table>
+</form>
+{% endblock %}

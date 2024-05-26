@@ -1,0 +1,29 @@
+{% extends "doctor/index.html" %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="/schedule_management_post#tab">
+<table>
+  <table class="table table-bordered">
+  <tr>
+    <td width="200px">Date</td>
+    <td>
+      <input type="date" name="textfield" id="textfield"  required class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>From Time</td>
+    <td>
+      <input type="time" name="textfield2" id="textfield2"  required class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>To Time</td>
+    <td>
+      <input type="time" name="textfield3" id="textfield3"  required class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><input type="submit" name="button" id="button" value="Save" class="btn btn-success" /></td>
+  </tr>
+</table>
+</table>
+</form>
+{% endblock %}
